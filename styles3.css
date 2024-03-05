@@ -1,0 +1,385 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    line-height: 1;
+    background-color: #f1f5f5;
+    height: auto;
+    width: auto;
+    webkit-text-size-adjust: none;
+}
+
+/* Header and Sidebar */
+
+#sidebar {
+    text-align: right;
+    position: fixed; /* Fixes the sidebar at the top of the screen */
+    top: 0; /* Aligns the sidebar to the top of the viewport */
+    left: 0; /* Aligns the sidebar to the left of the viewport */
+    width: 150px; /* Specifies the width of the sidebar */
+    height: 100%; /* Makes the sidebar full height of the viewport */
+    overflow-x: hidden;
+    overflow-y: auto; /* Adds a scrollbar if the content exceeds the viewport height */
+    background-color: #312450; /* Background color of the sidebar */
+    z-index: 10000; /* Ensures the sidebar stays on top of other content */
+}
+#sidebar > .inner {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -moz-transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    min-height: 100%;
+    opacity: 1;
+    width: 100%;
+}
+
+/* Adjustments for Main Content */
+#ALL {
+    margin-left: 200px; /* Adjusts the left margin to accommodate the fixed sidebar */
+    padding: 0px;
+}
+
+/* Adjustments for Sidebar Text Alignment */
+#sidebar nav ul {
+    list-style-type:decimal-leading-zero;
+    padding: 5px;
+    margin: 1 px;
+}
+
+#sidebar nav ul li {
+    display: inline-block; /* Aligns list items horizontally */
+    margin-right: 10px; /* Adds some space between the items */
+}
+
+#sidebar nav ul li a {
+    color: #fff;
+    text-decoration:navy;
+    padding: 10px;
+    display: block; /* Ensures the link takes up the full space of the list item */
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #6c34ed;
+}
+
+/* Main Content */
+#ALL {
+    margin-left: 150px;
+    padding: 0px;
+}
+
+/* Sections */
+.spot {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2 2px 5px rgba(14, 71, 185, 0.1);
+}
+
+.spot h1, .spot h2, .spot h3, .spot h4 {
+    margin-bottom: 10px;
+}
+
+.spot p {
+    margin-bottom: 20px;
+}
+
+
+
+/* Image */
+
+.image {
+    border-radius: 0.25em;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+#one.image{
+    height: 100vh;
+    width: 100vw;
+}
+    .image img {
+        border-radius: 0.25em;
+        display: block;
+    }
+
+    .image.left, .image.right {
+        max-width: 40%;
+    }
+
+        .image.left img, .image.right img {
+            width: 100%;
+        }
+
+    .image.left {
+        float: left;
+        margin: 0 1.5em 1em 0;
+        top: 0.25em;
+    }
+
+    .image.right {
+        float: right;
+        margin: 0 0 1em 1.5em;
+        top: 0.25em;
+    }
+
+    .image.fit {
+        display: block;
+        margin: 0 0 2em 0;
+        width: 100%;
+    }
+
+        .image.fit img {
+            width: 100%;
+        }
+
+    .image.main {
+        display: block;
+        margin: 0 0 3em 0;
+        width: 100%;
+    }
+
+        .image.main img {
+            width: 100%;
+        }
+
+/* List */
+
+ol {
+    list-style: decimal;
+    margin: 0 0 2em 0;
+    padding-left: 1.25em;
+}
+
+    ol li {
+        padding-left: 0.25em;
+    }
+
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+
+    ul li {
+        padding-left: 0.5em;
+    }
+
+    ul.alt {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        ul.alt li {
+            border-top: solid 1px rgba(255, 255, 255, 0.15);
+            padding: 0.5em 0;
+        }
+
+            ul.alt li:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+
+dl {
+    margin: 0 0 2em 0;
+}
+
+    dl dt {
+        display: block;
+        font-weight: bold;
+        margin: 0 0 1em 0;
+    }
+
+    dl dd {
+        margin-left: 2em;
+    }
+
+/* Footer */
+
+#sidebar + #ALL + #footer {
+   height: 1.3em;
+    text-align: left;
+    align-content: center;
+    margin-left: 150px;
+    display: flex;
+}
+
+#footer {list-style-type: none;
+    font-size: 1rem;
+    color: rgb(188, 188, 188);
+}
+
+
+/* ALL */
+
+.ALL {
+    position: relative;
+    margin-left: 0px;
+}
+
+    .ALL > .inner {
+        display:flex;
+        color: #ffffff;
+        max-width: 100%;
+        width: 100vw;
+        height:100vh;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: centre;
+    }     
+
+/*intro*/    
+	#intro {
+        
+		background-attachment: fixed;
+		background-image: url("images/intro.jpg");
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+        margin-bottom: 0px;
+	}
+
+		#intro p {
+			font-size: 1.25em;
+		}
+
+		
+
+		@media screen and (max-width: 1280px) {
+
+			#intro {
+				background-attachment: scroll;
+			}
+
+		}
+
+/*EXP*/
+#EXP {
+   background-color: #e40ed6;
+    margin-bottom: 0px;
+}
+
+    #EXP p {
+        font-size: 1.25em;
+    }
+/*Lang*/
+#Lang{
+    display: flex;
+    background-color:#3868C1;
+}
+
+/*Contact*/
+#Contact{
+    display:block;
+    background-color: navy;
+    margin-bottom: 0%;
+    -webkit-text-stroke-color: #ffffff;
+}
+/* spot */
+
+.spot > section {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: 22.5em;
+}
+
+    body.is-ie .spot > section {
+        min-height: 0;
+    }
+
+    .spot > section > .image {
+        background-position: center center;
+        background-size: cover;
+        border-radius: 0;
+        display: block;
+        position: relative;
+        width: 25em;
+    }
+
+        .spot > section > .image img {
+            border-radius: 0;
+            display: block;
+        }
+
+        .spot > section > .image:before {
+            -moz-transition: opacity 1s ease;
+            -webkit-transition: opacity 1s ease;
+            -ms-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+            background: rgba(26, 34, 194, 0.9);
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+    .spot > section > .content {
+        padding: 4em 5em 2em 5em ;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        width: 50em;
+        -ms-flex: 1;
+    
+    }
+
+        .spot > section > .content > .inner {
+            -moz-transform: translateX(0) translateY(0);
+            -webkit-transform: translateX(0) translateY(0);
+            -ms-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+            -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+            -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+            -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+            transition: opacity 1s ease, transform 1s ease;
+            opacity: 1;
+            margin-left: 3px;
+            text-align: center;
+        }
+
+    .spot > section:nth-child(2) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .spot > section:nth-child(3) {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
